@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="mini-spotify">MINI SPOTIFY</h1>
+
+    <div class="container">
+        <h2 id="currentSongTitle"> Song playing </h2>
+        <ul id="playlist">
+            <li onclick="loadSong(0)"> aylex-winery</li>
+            <li onclick="loadSong(1)"> fsm-team-happy-days</li>
+            <li onclick="loadSong(2)"> piki-to-the-glowing-forest</li>
+          </ul>
+        <audio id="player">
+            <source id="audioSource" src=" aylex-winery.mp3" type="audio/mpeg" />
+
+        </audio>
+
+        <div>
+            <button onclick="playAudio()"> Play </button>
+            <button onclick="pauseAudio()"> Pause </button>
+            <button onclick="nextSong()">Next Song</button>
+
+
+        </div>
+
+
+
+    </div>
+    
+</body>
+</html>
