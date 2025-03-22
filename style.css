@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: blueviolet;
+    
+}
+.container {
+    display: grid;
+    grid-template-rows: 10% 85% 5%;
+    grid-template-columns:25% 75%;
+    grid-template-areas:
+    "Title Title"
+    "Side-Bar Body"
+    "Footer Footer" ;
+    height: 100%;
+    border: 3px solid black;
+ 
+}
+.section {
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+  }
+  
+#mini-spotify{
+    grid-area: Title;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: xx-large;
+    
+}
+#playlist ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+#playlist li {
+    list-style: none;
+    padding: 20px 20px;
+    margin: 6px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+#playlist{
+    grid-area:Side-Bar ;
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.controls{
+    grid-area: Body;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-top: -100px;
+    gap: 30px;
+
+   
+      
+    
+    
+}
+.controls button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    gap: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.volume-control{
+    grid-area:Footer ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#currentSongTitle{
+
+    font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  width: 100%; 
+}
+.button-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+  }

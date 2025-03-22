@@ -8,35 +8,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="mini-spotify">MINI SPOTIFY</h1>
 
     <div class="container">
-        <h2 id="currentSongTitle"> Song playing </h2>
-        <ul id="playlist">
+        <div id="mini-spotify" class="section">MINI SPOTIFY</div>
+
+        
+        <div id="playlist" class="section">
+        <ul>
             <li onclick="loadSong(0)"> aylex-winery</li>
             <li onclick="loadSong(1)"> fsm-team-happy-days</li>
             <li onclick="loadSong(2)"> piki-to-the-glowing-forest</li>
             <li onclick="loadSong(3)"> cinematic-epic-emotional-eglair </li>
             <li onclick="loadSong(4)"> mixaund-motivate-me</li>
           </ul>
+        </div>
+       
+
+        <div class="controls section">
+            <div class="button-row">
+            <button onclick="playAudio()">▶️<br> Play </button>
+            <button onclick="pauseAudio()">⏸️<br> Pause </button>
+            <button onclick="nextSong()">⏭️<br> Next Song</button>
+            <button onclick="prevSong()">⏮️ Previous song</button>
+            <button onclick="stopAudio()">⏹️<br> Stop Song</button>
+
+        </div>
+        
+        <h2 id="currentSongTitle"> Song playing </h2>
+
+
+    </div>
+
+
+        <div class="volume-control section">
+            <input type="range" min="0" max="1" step="0.01" onchange="setVolume(this.value)">
+             Volume control
+        </div>
+
         <audio id="player">
             <source id="audioSource" src=" aylex-winery.mp3" type="audio/mpeg" />
 
         </audio>
-
-        <div class="controls">
-            <button onclick="playAudio()">▶️ Play </button>
-            <button onclick="pauseAudio()">⏸️ Pause </button>
-            <button onclick="nextSong()"> ⏭️Next Song</button>
-            <button onclick="stopAudio()">⏹️ Stop Song</button>
-            <button onclick="prevSong()"> ⏮️ Previous song</button>
-        </div>
-
-        <div class="volume-control">
-            <input type="range" min="0" max="1" step="0.01" onchange="setVolume(this.value)">
-
-        </div>
-
 
 
     </div>
